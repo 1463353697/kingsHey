@@ -1,5 +1,5 @@
 /**index.wxss**/
-.userinfo {
+/* .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,10 +18,125 @@
 
 .usermotto {
   margin-top: 200px;
+} */
+
+
+
+
+/* 从这里开始都是搜索框的样式表 */
+.search{  
+  width: 80%;  
+}  
+.search_arr {  
+  border: 1px solid #d0d0d0;  
+  border-radius: 10rpx;  
+  margin-left: 20rpx;  
+}  
+.search_arr input{  
+  margin-left: 60rpx;  
+  height: 60rpx;  
+  border-radius: 5px;  
+}  
+.bc_text {  
+  line-height: 68rpx;  
+  height: 68rpx;  
+  margin-top: 34rpx;  
+}  
+.searchpage_row{  
+  display: flex;  
+  flex-direction: row;
+  justify-content: center; 
+}  
+.searchcion {  
+  margin: 10rpx 10rpx 10rpx 10rpx;  
+  position: absolute;  
+  left:100rpx;  
+  z-index: 2;  
+  width: 20px;  
+  height: 20px;  
+  text-align: center;  
+}  
+
+
+/* 轮播样式表 */
+.lunboblock {
+  margin: -30px 25px;
+ 
 }
 
 
+/* 分类菜单导航栏 */
+.menu-wrp { 
+  width:85%; 
+  margin-top:100rpx; 
+  margin-left: 20px;
+ } 
+ .menu-wrp:after{ 
+   content:""; 
+   display:block; 
+   clear:both; 
+ } 
+/* 这是菜单导航单个项目的样式 */
+ .menu-list{ 
+   float:left; 
+   width:25%; 
+   box-sizing: border-box; 
+   padding-bottom:10px; 
+  
+ } 
+   
+ .menu-img{ 
+   width:120rpx; 
+   height:84rpx; 
+   display:block; 
+   margin:0 auto; 
+   margin-bottom:5px; 
+ } 
+ .menu-desc{ 
+   background-color:#ffffff; 
+   color:#E86E25; 
+   width:100%; 
+   text-align: center; 
+   display:block; 
+   font-size:12px; 
+ } 
+ .gap-1,.gap-2{ 
+   width:100%; 
+   height:10rpx; 
+   background:rgb(238, 238, 238); 
+ }
 
-.searchInput {
+
+ /* 从这里开始是每日推荐的样式 */
+ .recommendblock {
+   margin-top: 10px;
+ }
+ .recommendlabel {
+   padding: 7px;
+   background-color: #FFCBA7;
+   color: #FF625D;
+  
+
+ }
+
+
+
+
+
+/* .searchinput {
   border: 1px solid gray;
 }
+.searchicon {
+ 
+
+  background-color: pink;
+
+}
+.searchicon image {
+  width: 20px;
+  height: 20px;
+}
+.searchblock {
+  display: flex;
+  flex-direction: row;
+} */

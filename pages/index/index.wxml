@@ -1,18 +1,20 @@
 <!--index.wxml-->
 <view class="container">
-  <view>
-    <form>
-      <input class='searchInput'  type='text' placeholder='嘿米牛肉饭'></input>
-    </form>
-    
+   <view class='searchpage_row' bindtap="suo">  
+      <view class="search">  
+        <view class="df search_arr">  
+          <icon class="searchcion" size='20' type='search'></icon>  
+          <input class="" disabled placeholder="嘿米牛肉饭" value="{{searchValue}}"/>  
+        </view>  
+      </view>  
+        
+    </view>  
 
-  </view>
 
 
 
 
-
-  <view class="userinfo">
+  <!-- <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
@@ -21,5 +23,62 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
+  </view> -->
+
+  <!-- 这里开始是轮播图片区域 -->
+  <swiper class='lunboblock' indicator-dots="{{indicatorDots}}"  
+
+           autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">  
+
+         <block wx:for="{{imgUrls}}">  
+
+           <swiper-item>  
+
+              <navigator url="{{item.link}}" hover-class="navigator-hover">  
+
+               <image mode='aspectFit' src="{{item.url}}" class="slide-image" width="300" height="155"/>  
+
+              </navigator>  
+
+           </swiper-item>  
+
+         </block>  
+
+  </swiper> 
+
+
+
+  <!-- 从这里开始是分类菜单的部分  -->
+
+
+  <view class="menu-wrp"> 
+  <!--设定一个item项后，遍历输出-->
+    <view class="menu-list" wx:for="{{menu.imgUrls}}"> 
+      <image class="menu-img" src="{{item}}" /> 
+      <view class="menu-desc">{{menu.descs[index]}}</view> 
+    </view> 
+  </view> 
+  <view class="gap-1"></view> 
+
+  <!-- 从这里开始是每日推荐部分 -->
+  <view class="recommendblock">
+    <div class="recommendlabel">每日推荐</div>
+    <swiper class="recommendList" indicator-dots="true" 
+    indicator-color="rgba(228,228,228,1)" 
+    indicator-active-color="#FECA49">
+      <block wx:for="{{recommendList}}" wx:key="">
+      <swiper-item>
+      <block wx:for="{{item}}" wx:key="">
+        <view class="recommendList-info">
+          <image src="{{item.src}}" class="recommendList-image"></image>
+          <view class="recommendList-text">{{item.name}}</view>
+        </view>
+      </block>
+      </swiper-item>
+      </block>
+    </swiper>
   </view>
+
+
+
 </view>
