@@ -1,0 +1,30 @@
+<!-- 这是菜单列表的模板 -->
+<template name="goodsList"> 
+<view wx:for="{{goodsList}}" wx:for-item="goods" wx:key="unique">
+  <view class='goods-wrap'>
+     <view class='goods-img-wrap'>
+      <image src='{{goods.imgUrl}}' class='goods-img'/>
+    </view> 
+    <view class='goods-info'>
+      <view class='goods-title'>
+          {{goods.title}}
+          
+          
+      </view>
+      <view class='goods-others'>
+        <view class='goods-score'>
+          <image src="../../public/star.png"/>
+          
+          {{goods.score}}
+        </view>
+        <view class='goods-sale'>
+          月售{{goods.sale}}
+        </view>
+      </view>
+    </view>
+    <view class='shopcar'>
+      <image src="../../public/shoppingcar.png"/>
+    </view>
+  </view>
+</view>
+</template>

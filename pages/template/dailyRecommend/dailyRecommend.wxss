@@ -1,0 +1,12 @@
+.recommend-wrap {
+    margin-right: 20px;
+    font-size: 13px;
+    color: #333333;
+    margin-bottom: 5px;
+}
+.recommend-img image {
+    width: 130px;
+    height: 90px;
+    border-radius: 5px;
+
+}

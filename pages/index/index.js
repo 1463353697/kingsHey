@@ -51,43 +51,118 @@ Page({
 
 
     // 这是导航菜单栏用的
-    menu:{ 
-      imgUrls:[
-        '../../public/fenlei1.png', 
-        '../../public/fenlei2.png', 
-        '../../public/fenlei3.png', 
-        '../../public/fenlei4.png', 
-        '../../public/fenlei5.png', 
-        '../../public/fenlei6.png', 
-        '../../public/fenlei7.png', 
-        '../../public/fenlei8.png',
+    // menu:{ 
+    //   imgUrls:[
+    //     '../../public/fenlei1.png', 
+    //     '../../public/fenlei2.png', 
+    //     '../../public/fenlei3.png', 
+    //     '../../public/fenlei4.png', 
+    //     '../../public/fenlei5.png', 
+    //     '../../public/fenlei6.png', 
+    //     '../../public/fenlei7.png', 
+    //     '../../public/fenlei8.png',
        
-      ], 
-      descs:[ 
-        '早餐', 
-        '面食', 
-        '烧烤', 
-        '甜品饮品', 
-        '套饭炒饭', 
-        '冒菜', 
-        '汉堡炸鸡', 
-        '保温柜' 
+    //   ], 
+    //   descs:[ 
+    //     '早餐', 
+    //     '面食', 
+    //     '烧烤', 
+    //     '甜品饮品', 
+    //     '套饭炒饭', 
+    //     '冒菜', 
+    //     '汉堡炸鸡', 
+    //     '保温柜' 
        
-      ] 
+    //   ] 
 
-    },
-    recommendList:{
-      src:[
-        '../../public/recommend1.png',
-        '../../public/recommend2.png'
+    // },
+    menulist:[
+      {
+        imgurl:'../../public/fenlei1.png',
+        descs:'早餐'
+      },
+      {
+        imgurl:'../../public/fenlei2.png',
+        descs:'面食'
+      },
+      {
+        imgurl:'../../public/fenlei3.png',
+        descs:'烧烤'
+      },
+      {
+        imgurl:'../../public/fenlei4.png',
+        descs:'甜品饮品'
+      },
+      {
+        imgurl:'../../public/fenlei5.png',
+        descs:'套饭炒饭'
+      },
+      {
+        imgurl:'../../public/fenlei6.png',
+        descs:'冒菜'
+      },
+      {
+        imgurl:'../../public/fenlei7.png',
+        descs:'汉堡炸鸡'
+      },
+      {
+        imgurl:'../../public/fenlei8.png',
+        descs:'保温柜'
+      },
 
-      ],
-      name:[
-        "炸酱面",
-        "冒菜"
-      ]
-    }
+    ],
+    
+    // 菜单列表的数据
+    goodsList: [
+      {
+        imgUrl: 'http://img0.imgtn.bdimg.com/it/u=1095344374,4058482434&fm=26&gp=0.jpg',
+        title: '冒菜',
+        score:'5.0',
+        sale:'200'
+      },
+      {
+        imgUrl: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1988567259,1697125837&fm=26&gp=0.jpg',
+        title: '牛肉米线',
+        score:'4.8',
+        sale:'261'
+      },
+      {
+        imgUrl: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1878911362,1925132360&fm=26&gp=0.jpg',
+        title: '套饭',
+        score:'4.2',
+        sale:'156'
+      },
+      {
+        imgUrl: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1958169339,795515064&fm=11&gp=0.jpg',
+        title: '珍珠奶茶',
+        score:'4.5',
+        sale:'268'
+
+      },
+    ],
+    dailyRecommend: [
+      {
+        imgURL: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2011524346,2288768261&fm=26&gp=0.jpg',
+        title: '珍珠奶茶'
+      },
+      {
+        imgURL: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1967393588,3591021201&fm=26&gp=0.jpg',
+        title: '肉松面包'
+      },
+      {
+        imgURL: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1648098353,3283173880&fm=26&gp=0.jpg',
+        title: '羊肉串',
+
+      },
+      {
+        imgURL: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=524688554,2234594528&fm=26&gp=0.jpg',
+        title: '肉丝盖饭'
+      }
+    ]
   },
+
+
+
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
@@ -129,6 +204,10 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  btnclick: function(){
+    console.log(this.data.menulist[index].descs);
+
   },
 
 

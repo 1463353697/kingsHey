@@ -1,0 +1,15 @@
+<!-- 这里是每日推荐的模板 -->
+<template name="dailyRecommend">
+    <view wx:for="{{dailyRecommend}}" wx:for-item="recommend" wx:key="anything">
+        <view class='recommend-wrap'>
+            <view class='recommend-img'>
+                <image src='{{recommend.imgURL}}'/>
+            </view>
+            <view class='recommend-info'>
+                <view>{{recommend.title}}</view>
+            </view>
+        </view>
+    </view>
+
+    
+</template>

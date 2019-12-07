@@ -1,12 +1,48 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/index/index",
+    "pages/my/my",
+    "pages/order/order",
+    "pages/shoppingcart/shoppingcart"
     
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "千喜鹤美食城",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#505864",
+    "selectedColor": "#2D75B6",
+    "backgroundColor": "#8497B0",
+    "borderStyle": "#2D75B6",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./public/menu.png",
+        "selectedIconPath": "./public/menu-s.png",
+        "color":"white",
+        "text": "菜单"
+      },
+      {
+        "pagePath": "pages/shoppingcart/shoppingcart",
+        "iconPath": "./public/shoppingcart.png",
+        "selectedIconPath": "./public/shoppingcart-s.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "iconPath": "./public/order.png",
+        "selectedIconPath": "./public/order-s.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "./public/my.png",
+        "selectedIconPath": "./public/my-s.png",
+        "text": "我的"
+      }
+    ]
   }
 }

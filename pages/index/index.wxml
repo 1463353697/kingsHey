@@ -1,4 +1,10 @@
 <!--index.wxml-->
+
+<!-- 引入菜单列表模板 -->
+<import src="../template/goodsList/goodsList.wxml" />
+<!-- 引入每日推荐模板 -->
+<import src="../template/dailyRecommend/dailyRecommend.wxml" />
+
 <view class="container">
    <view class='searchpage_row' bindtap="suo">  
       <view class="search">  
@@ -53,9 +59,9 @@
 
   <view class="menu-wrp"> 
   <!--设定一个item项后，遍历输出-->
-    <view class="menu-list" wx:for="{{menu.imgUrls}}"> 
-      <image class="menu-img" src="{{item}}" /> 
-      <view class="menu-desc">{{menu.descs[index]}}</view> 
+    <view bindtap="btnclick" class="menu-list" wx:for="{{menulist}}" wx:for-item="menu"> 
+      <image class="menu-img" src="{{menu.imgurl}}" /> 
+      <view  class="menu-desc">{{menu.descs}}</view> 
     </view> 
   </view> 
   <view class="gap-1"></view> 
@@ -63,20 +69,33 @@
   <!-- 从这里开始是每日推荐部分 -->
   <view class="recommendblock">
     <div class="recommendlabel">每日推荐</div>
-    <swiper class="recommendList" indicator-dots="true" 
-    indicator-color="rgba(228,228,228,1)" 
-    indicator-active-color="#FECA49">
-      <block wx:for="{{recommendList}}" wx:key="">
-      <swiper-item>
-      <block wx:for="{{item}}" wx:key="">
-        <view class="recommendList-info">
-          <image src="{{item.src}}" class="recommendList-image"></image>
-          <view class="recommendList-text">{{item.name}}</view>
+    <view class='recommend-list'>
+      <template is="dailyRecommend" data="{{dailyRecommend:dailyRecommend}}"></template>
+    </view>
+    
+    
+  </view>
+  <view class="gap-1"></view> 
+
+  <!-- 这里开始是菜单的部分 -->
+  <view class='goodslist-block'>
+    <view>推荐菜品</view>
+    <view class='goodslist-check'>
+      <view class='check1'>综合排序</view>
+      <view class='check2'>销量</view>
+      <view class='check3'>
+        <view class="words">
+        筛选
         </view>
-      </block>
-      </swiper-item>
-      </block>
-    </swiper>
+        <view class='aicon'>
+          <image src="../../public/checkicon.png"/>
+        </view>
+      </view>
+    </view>
+    <!-- 使用菜单列表模板 -->
+    <template is="goodsList" data="{{goodsList:goodsList}}">
+    </template>
+
   </view>
 
 
