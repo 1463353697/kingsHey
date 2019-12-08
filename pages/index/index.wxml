@@ -59,8 +59,8 @@
 
   <view class="menu-wrp"> 
   <!--设定一个item项后，遍历输出-->
-    <view bindtap="btnclick" class="menu-list" wx:for="{{menulist}}" wx:for-item="menu"> 
-      <image class="menu-img" src="{{menu.imgurl}}" /> 
+    <view data-id="{{menu.index}}"  bindtap="menuBtnClick" class="menu-list" wx:for="{{menulist}}" wx:for-item="menu"> 
+      <image  class="menu-img" src="{{menu.imgurl}}" /> 
       <view  class="menu-desc">{{menu.descs}}</view> 
     </view> 
   </view> 

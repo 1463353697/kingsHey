@@ -79,35 +79,43 @@ Page({
     menulist:[
       {
         imgurl:'../../public/fenlei1.png',
-        descs:'早餐'
+        descs:'早餐',
+        index: 1
       },
       {
         imgurl:'../../public/fenlei2.png',
-        descs:'面食'
+        descs:'面食',
+        index: 2
       },
       {
         imgurl:'../../public/fenlei3.png',
-        descs:'烧烤'
+        descs:'烧烤',
+        index: 3
       },
       {
         imgurl:'../../public/fenlei4.png',
-        descs:'甜品饮品'
+        descs:'甜品饮品',
+        index: 4  
       },
       {
         imgurl:'../../public/fenlei5.png',
-        descs:'套饭炒饭'
+        descs:'套饭炒饭',
+        index: 5
       },
       {
         imgurl:'../../public/fenlei6.png',
-        descs:'冒菜'
+        descs:'冒菜',
+        index: 6
       },
       {
         imgurl:'../../public/fenlei7.png',
-        descs:'汉堡炸鸡'
+        descs:'汉堡炸鸡',
+        index: 7
       },
       {
         imgurl:'../../public/fenlei8.png',
-        descs:'保温柜'
+        descs:'保温柜',
+        index: 8
       },
 
     ],
@@ -205,8 +213,348 @@ Page({
       hasUserInfo: true
     })
   },
-  btnclick: function(){
-    console.log(this.data.menulist[index].descs);
+
+  //根据选择的不同类别，显示不同的菜单
+  menuBtnClick: function(e){
+    var index = e.currentTarget.dataset.id; 
+    
+    // 早餐
+    if(index==1){
+      
+      this.setData({
+        goodsList: [
+          {
+            imgUrl: 'http://img3.imgtn.bdimg.com/it/u=1672621874,1164728575&fm=26&gp=0.jpg',
+            title: '爱心荷包蛋',
+            score:'5.0',
+            sale:'200'
+          },
+          {
+            imgUrl: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=165480061,1924399069&fm=26&gp=0.jpg',
+            title: '现炸油条',
+            score:'4.8',
+            sale:'261'
+          },
+          {
+            imgUrl: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=4140751928,2974476575&fm=26&gp=0.jpg',
+            title: '营养豆浆',
+            score:'4.2',
+            sale:'156'
+          },
+          {
+            imgUrl: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1022642727,2687358925&fm=26&gp=0.jpg',
+            title: '酱肉小笼包',
+            score:'4.5',
+            sale:'268'
+    
+          },
+          {
+            imgUrl: 'http://img1.imgtn.bdimg.com/it/u=2318396929,3022463536&fm=26&gp=0.jpg',
+            title: '卡通小馒头',
+            score:'4.5',
+            sale:'268'
+    
+          },
+          {
+            imgUrl: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=156551076,1819800577&fm=26&gp=0.jpg',
+            title: '肉夹馍',
+            score:'4.5',
+            sale:'268'
+    
+          },
+          {
+            imgUrl: 'http://img0.imgtn.bdimg.com/it/u=1133993642,3079121332&fm=26&gp=0.jpg',
+            title: '白面馒头',
+            score:'4.5',
+            sale:'268'
+    
+          },
+          {
+            imgUrl: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2607432757,2636233432&fm=26&gp=0.jpg',
+            title: '营养黑米粥',
+            score:'4.5',
+            sale:'268'
+    
+          }
+
+        ]
+
+
+      },function(){
+        console.log("渲染完毕");
+
+      })
+      console.log(index);
+    }
+
+
+    //面食
+    if(index==2){
+      this.setData({
+        goodsList: [
+          {
+            imgUrl: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2263331386,1394198673&fm=26&gp=0.jpg',
+            title: '牛肉面',
+            score:'5.0',
+            sale:'200'
+          },
+          {
+            imgUrl: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2023054176,496875081&fm=26&gp=0.jpg',
+            title: '遵义羊肉粉',
+            score:'4.2',
+            sale:'156'
+          },
+          {
+            imgUrl: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1028947296,1687306050&fm=26&gp=0.jpg',
+            title: '虾仁玉米饺子',
+            score:'4.2',
+            sale:'156'
+          },
+          {
+            imgUrl: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1988567259,1697125837&fm=26&gp=0.jpg',
+            title: '牛肉米线',
+            score:'4.8',
+            sale:'261'
+          },
+          {
+            imgUrl: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2333424015,3287221080&fm=26&gp=0.jpg',
+            title: '紫菜馄饨',
+            score:'4.2',
+            sale:'156'
+          }
+        ]
+
+
+      })
+    }
+
+
+    //烧烤
+    if(index==3){
+      this.setData({
+        goodsList: [
+          {
+            imgUrl: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1144550453,623062070&fm=26&gp=0.jpg',
+            title: '豆皮',
+            score:'4.6',
+            sale:'200'
+          },
+          {
+            imgUrl: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1966089816,4122614722&fm=26&gp=0.jpg',
+            title: '烤面筋',
+            score:'4.8',
+            sale:'261'
+          },
+          {
+            imgUrl: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1801355983,2478325710&fm=26&gp=0.jpg',
+            title: '骨肉相连',
+            score:'4.2',
+            sale:'156'
+          },
+          {
+            imgUrl: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3668452990,4290421151&fm=26&gp=0.jpg',
+            title: '新奥尔良烤翅',
+            score:'4.5',
+            sale:'268'
+    
+          },
+          {
+            imgUrl: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2382488380,3316618983&fm=26&gp=0.jpg',
+            title: '年糕',
+            score:'4.5',
+            sale:'268'
+    
+          },
+          {
+            imgUrl: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4271087190,1977137873&fm=26&gp=0.jpg',
+            title: '猪肉火腿肠',
+            score:'4.5',
+            sale:'268'
+    
+          },
+        ]
+
+
+      })
+    }
+
+
+    //甜品饮品
+    if(index==4){
+      this.setData({
+        goodsList: [
+          {
+            imgUrl: 'http://img0.imgtn.bdimg.com/it/u=1095344374,4058482434&fm=26&gp=0.jpg',
+            title: 'zhenzhu',
+            score:'5.0',
+            sale:'200'
+          },
+          {
+            imgUrl: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1988567259,1697125837&fm=26&gp=0.jpg',
+            title: '牛肉米线',
+            score:'4.8',
+            sale:'261'
+          },
+          {
+            imgUrl: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1878911362,1925132360&fm=26&gp=0.jpg',
+            title: '套饭',
+            score:'4.2',
+            sale:'156'
+          },
+          {
+            imgUrl: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1958169339,795515064&fm=11&gp=0.jpg',
+            title: '珍珠奶茶',
+            score:'4.5',
+            sale:'268'
+    
+          },
+        ]
+
+
+      })
+    }
+
+    //套饭炒饭
+    if(index==5){
+      this.setData({
+        goodsList: [
+          {
+            imgUrl: 'http://img0.imgtn.bdimg.com/it/u=1095344374,4058482434&fm=26&gp=0.jpg',
+            title: 'zhenzhu',
+            score:'5.0',
+            sale:'200'
+          },
+          {
+            imgUrl: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1988567259,1697125837&fm=26&gp=0.jpg',
+            title: '牛肉米线',
+            score:'4.8',
+            sale:'261'
+          },
+          {
+            imgUrl: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1878911362,1925132360&fm=26&gp=0.jpg',
+            title: '套饭',
+            score:'4.2',
+            sale:'156'
+          },
+          {
+            imgUrl: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1958169339,795515064&fm=11&gp=0.jpg',
+            title: '珍珠奶茶',
+            score:'4.5',
+            sale:'268'
+    
+          },
+        ]
+
+
+      })
+    }
+
+    //冒菜
+    if(index==6){
+      this.setData({
+        goodsList: [
+          {
+            imgUrl: 'http://img0.imgtn.bdimg.com/it/u=1095344374,4058482434&fm=26&gp=0.jpg',
+            title: 'zhenzhu',
+            score:'5.0',
+            sale:'200'
+          },
+          {
+            imgUrl: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1988567259,1697125837&fm=26&gp=0.jpg',
+            title: '牛肉米线',
+            score:'4.8',
+            sale:'261'
+          },
+          {
+            imgUrl: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1878911362,1925132360&fm=26&gp=0.jpg',
+            title: '套饭',
+            score:'4.2',
+            sale:'156'
+          },
+          {
+            imgUrl: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1958169339,795515064&fm=11&gp=0.jpg',
+            title: '珍珠奶茶',
+            score:'4.5',
+            sale:'268'
+    
+          },
+        ]
+
+
+      })
+    }
+
+    //汉堡炸鸡
+    if(index==7){
+      this.setData({
+        goodsList: [
+          {
+            imgUrl: 'http://img0.imgtn.bdimg.com/it/u=1095344374,4058482434&fm=26&gp=0.jpg',
+            title: 'zhenzhu',
+            score:'5.0',
+            sale:'200'
+          },
+          {
+            imgUrl: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1988567259,1697125837&fm=26&gp=0.jpg',
+            title: '牛肉米线',
+            score:'4.8',
+            sale:'261'
+          },
+          {
+            imgUrl: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1878911362,1925132360&fm=26&gp=0.jpg',
+            title: '套饭',
+            score:'4.2',
+            sale:'156'
+          },
+          {
+            imgUrl: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1958169339,795515064&fm=11&gp=0.jpg',
+            title: '珍珠奶茶',
+            score:'4.5',
+            sale:'268'
+    
+          },
+        ]
+
+
+      })
+    }
+
+    //保温柜
+    if(index==8){
+      this.setData({
+        goodsList: [
+          {
+            imgUrl: 'http://img0.imgtn.bdimg.com/it/u=1095344374,4058482434&fm=26&gp=0.jpg',
+            title: 'zhenzhu',
+            score:'5.0',
+            sale:'200'
+          },
+          {
+            imgUrl: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1988567259,1697125837&fm=26&gp=0.jpg',
+            title: '牛肉米线',
+            score:'4.8',
+            sale:'261'
+          },
+          {
+            imgUrl: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1878911362,1925132360&fm=26&gp=0.jpg',
+            title: '套饭',
+            score:'4.2',
+            sale:'156'
+          },
+          {
+            imgUrl: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1958169339,795515064&fm=11&gp=0.jpg',
+            title: '珍珠奶茶',
+            score:'4.5',
+            sale:'268'
+    
+          },
+        ]
+
+
+      })
+    }
+
+
 
   },
 
