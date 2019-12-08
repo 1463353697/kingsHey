@@ -1,1 +1,85 @@
-<view>购物车</view>
+<view class="shoppingcart-block">
+    <view class="topbar">
+        <view class="baowen">已选择1-3号保温柜</view>
+        <view class="change">编辑</view>
+    </view>
+    <view class="gap-1"></view> 
+    <view class="shopping-list">
+        <view class="icon1">
+            <image src="../../public/shopping-check.png"/>
+        </view>
+        <view class="goods-img">
+            <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1410436906,4117570335&fm=26&gp=0.jpg"/>
+        </view>
+        <view class="goods-info">
+            <view class="name"> 鸡肉卷</view>
+            <view class="others">微辣</view>
+        </view>
+        <view class="goods-price">
+            <view>￥18.00</view>
+            <view class="price-others">
+                <view class="goods-reduce"><image src="../../public/goods-reduce.png"/></view>
+                <view class="goods-count">3</view>
+                <view class="goods-add"><image src="../../public/goods-add.png"/></view>
+            </view>
+        </view>
+    </view>
+    <view class="gap-1"></view> 
+    <view class="shopping-list">
+        <view class="icon1">
+            <image src="../../public/shopping-no.png"/>
+        </view>
+        <view class="goods-img">
+            <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2497779493,3826269852&fm=26&gp=0.jpg"/>
+        </view>
+        <view class="goods-info">
+            <view class="name"> 中杯可乐</view>
+            <view class="others">多加冰</view>
+        </view>
+        <view class="goods-price">
+            <view>￥6.00</view>
+            <view class="price-others">
+                <view class="goods-reduce"><image src="../../public/goods-reduce.png"/></view>
+                <view class="goods-count">2</view>
+                <view class="goods-add"><image src="../../public/goods-add.png"/></view>
+            </view>
+        </view>
+    </view>
+    <view class="gap-1"></view> 
+    <view class="shopping-list">
+        <view class="icon1">
+            <image src="../../public/shopping-check.png"/>
+        </view>
+        <view class="goods-img">
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=323696858,864299966&fm=26&gp=0.jpg"/>
+        </view>
+        <view class="goods-info">
+            <view class="name"> 炸鸡腿</view>
+            <view class="others">微辣</view>
+        </view>
+        <view class="goods-price">
+            <view>￥12.00</view>
+            <view class="price-others">
+                <view class="goods-reduce"><image src="../../public/goods-reduce.png"/></view>
+                <view class="goods-count">2</view>
+                <view class="goods-add"><image src="../../public/goods-add.png"/></view>
+            </view>
+        </view>
+    </view>
+    <view class="gap-1"></view> 
+    <view class="bottom-bar">
+        
+        <view class="check-all">
+            <view class="img"><image src="../../public/shopping-no.png"/></view>
+            <view class="text">全选</view>
+        </view>
+        <view class="allpay">
+            合计￥24.00
+            
+        </view>
+        <view class="pay-btn">去结算</view>
+    </view>
+    
+
+    
+</view>

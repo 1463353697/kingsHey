@@ -1,1 +1,99 @@
-<view>订单</view>
+<view>
+    <view class="gap-1"></view>
+    <view class="shopping-list">
+        <view class="icon1">
+            <image src="../../public/shopping-check.png"/>
+        </view>
+        <view class="goods-img">
+            <image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=336661445,2909882128&fm=26&gp=0.jpg"/>
+        </view>
+        <view class="goods-info">
+            <view class="name"> 盖饭</view>
+            <view class="others">多饭少菜</view>
+        </view>
+        <view class="goods-price">
+            ￥13.00
+            
+        </view>
+        <view class="status">
+            <view class="text">等待接单</view>
+            <view class="btn2">退款 </view>
+        </view>
+    </view>
+    <view class="gap-1"></view>
+    <view class="shopping-list">
+        <view class="icon1">
+            <image src="../../public/shopping-no.png"/>
+        </view>
+        <view class="goods-img">
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2881801983,206472133&fm=26&gp=0.jpg"/>
+        </view>
+        <view class="goods-info">
+            <view class="name"> 羊肉馄饨</view>
+            <view class="others">微辣</view>
+        </view>
+        <view class="goods-price">
+            ￥12.00
+            
+        </view>
+        <view class="status">
+            <view class="text">已接单</view>
+            <view class="btn1">二维码 </view>
+        </view>
+    </view>
+    <view class="gap-1"></view>
+    <view class="shopping-list">
+        <view class="icon1">
+            <image src="../../public/shopping-check.png"/>
+        </view>
+        <view class="goods-img">
+            <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=323696858,864299966&fm=26&gp=0.jpg"/>
+        </view>
+        <view class="goods-info">
+            <view class="name"> 炸鸡腿</view>
+            <view class="others">微辣</view>
+        </view>
+        <view class="goods-price">
+            ￥6.00
+            
+        </view>
+        <view class="status">
+            <view class="text">订单完成</view>
+            
+        </view>
+    </view>
+    <view class="gap-1"></view>
+    <view class="shopping-list">
+        <view class="icon1">
+            <image src="../../public/shopping-no.png"/>
+        </view>
+        <view class="goods-img">
+            <image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3673035082,1109816467&fm=26&gp=0.jpg"/>
+        </view>
+        <view class="goods-info">
+            <view class="name"> 豆花套饭</view>
+            <view class="others">微辣</view>
+        </view>
+        <view class="goods-price">
+            ￥10.00
+            
+        </view>
+        <view class="status">
+            <view class="text">退款成功</view>
+            
+        </view>
+    </view>
+     <view class="gap-1"></view>
+     <view class="bottom-bar">
+        
+        <view class="check-all">
+            <view class="img"><image src="../../public/shopping-no.png"/></view>
+            <view class="text">全选</view>
+        </view>
+        <view class="more-order">
+            再来一单
+            
+        </view>
+        <view class="delete-order">删除订单</view>
+    </view>
+</view>

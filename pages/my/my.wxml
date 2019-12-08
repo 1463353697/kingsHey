@@ -1,1 +1,54 @@
-<view>我的</view>
+<view class="myView">
+    
+    <view class="userinfoblock">
+        <view class="userinfotext">
+            <view class="name">
+                XXXX(用户名)
+            </view>
+            <view class="sign">他很懒，还没有输入个性签名</view>
+        </view>
+        <view class="userinfoimg">
+            <image src="../../public/userimg.png"/>
+        </view>
+    </view>
+    <view class="others-my">
+        <view class="others-list">
+            <view class="icon1">
+                <image src="../../public/myorder.png"/>
+            </view>
+            <view class="name">我的订单</view>
+            <view class="icon2">
+                <image src="../../public/myicon.png"/>
+            </view>
+        </view>
+        <view class="others-list">
+            <view class="icon1">
+                <image src="../../public/myheart.png"/>
+            </view>
+            <view class="name">我的收藏</view>
+            <view class="icon2">
+                <image src="../../public/myicon.png"/>
+            </view>
+        </view>
+        <view class="others-list">
+            <view class="icon1">
+                <image src="../../public/myview.png"/>
+            </view>
+            <view class="name">我的评价</view>
+            <view class="icon2">
+                <image src="../../public/myicon.png"/>
+            </view>
+        </view>
+        <view class="others-list">
+            <view class="icon1">
+                <image src="../../public/mymoney.png"/>
+            </view>
+            <view class="name">退款详情</view>
+            <view class="icon2">
+                <image src="../../public/myicon.png"/>
+            </view>
+        </view>
+    </view>
+    <view></view>
+    <view></view>
+</view>
